@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-for i in range(97, 123):
-    if chr(i) != 'q' and chr(i) != 'e':
-        print("{}".format(chr(i)), end='')
-
+for w in range(97, 123):
+    if w == 101 or w == 113:
+        continue
+    print("{}".format(chr(w)), end="")
