@@ -1,48 +1,39 @@
 #include "lists.h"
-
 /**
- * insert_dnodeint_at_index - insert a node at an index
- * @h: head of list
- * @idx: the index
- * @n: the int to put into the new node
- * Return: address of new node or NULL
+ * insert_dnodeint_at_index - Insert a node in the postion
+ * @h: Pointer to direction of the head
+ * @n: The data integer
+ * @idx: Position at the insert the new node
+ * Return: The direction of the new node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	/* declarations */
-	dlistint_t *location;
-	dlistint_t *new = malloc(sizeof(dlistint_t));
+	dlistint_t *new_mem, *res_mem = *h;
+	/* unsigned int counter = 0 */
 
-	/* check for NULL */
-	if (!h || !new)
-		return (new ? free(new), NULL : NULL);
-	/* assign some things to new */
-	location = *h;
-	new->n = n;
-	/* if index is 0 */
-	if (!idx)
+	if (idx == 0)
+		return (add_dnodeint(h, n));
+
+	for (; idx != 1; idx--)
 	{
-		new->prev = NULL;
-		new->next = location ? location : NULL;
-		if (location)
-		{
-			location->prev = new;
-		}
-		return (*h = new);
+		if (res_mem == NULL)
+			return (NULL);
+		res_mem = res_mem->next;
 	}
-	/* otherwise, move to place before index and install new node */
-	for (; location; location = location->next, idx--)
-	{
-		if (idx - 1 == 0)
-		{
-			new->prev = location;
-			new->next = location->next;
-			if (new->next)
-				new->next->prev = new;
-			location->next = new;
-			return (new);
-		}
-	}
-	/* if all else fails, free new & return NULL */
-	return (free(new), NULL);
+
+	if (res_mem->next == NULL)
+		return (add_dnodeint_end(h, n));
+
+	new_mem = malloc(sizeof(dlistint_t));
+
+	if (new_mem == NULL)
+		return (NULL);
+
+	new_mem->n = n;
+	new_mem->next = res_mem->next;
+	new_mem->prev = res_mem;
+	res_mem->next->prev = new_mem;
+	res_mem->next = new_mem;
+
+	return (new_mem);
 }
