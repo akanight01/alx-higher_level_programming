@@ -54,4 +54,4 @@ class SinglyLinkedList:
         if ptr == self.__head:
             self.__head = newNode
         else:
-            ptr_prev.next_node =
+            ptr_prev.next_node = 
