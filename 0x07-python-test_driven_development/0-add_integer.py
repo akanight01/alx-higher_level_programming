@@ -8,6 +8,7 @@ This module is composed by a function that adds two numbers
 
 def add_integer(a, b=98):
     """ Function that adds two integer and/or float numbers
+<<<<<<< HEAD
 
     Args:
         a: first number
@@ -19,6 +20,19 @@ def add_integer(a, b=98):
     Raises:
         TypeError: If a or b aren't integer and/or float numbers
 
+=======
+    
+    Args:
+        a: first number
+        b: second number
+        
+    Returns:
+        The addition of the two given numbers
+        
+    Raises:
+        TypeError: If a or b aren't integer and/or float numbers
+        
+>>>>>>> b075864fc06de69c82463fdfefa3d0e07182f1d3
     """
 
     if not isinstance(a, int) and not isinstance(a, float):
