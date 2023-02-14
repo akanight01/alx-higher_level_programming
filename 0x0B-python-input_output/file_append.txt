@@ -1,0 +1,6 @@
+This School is so cool!
+<<<<<<< HEAD
+=======
+This School is so cool!
+This School is so cool!
+>>>>>>> 0f9335aeefad229f6daf32095d498cf8bbd11781
