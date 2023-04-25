@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
-=======
-<<<<<<< HEAD
 """class Student that defines a student by:
 Public instance attributes:
 first_name
@@ -15,7 +13,6 @@ class Student:
 
     def __init__(self, first_name, last_name, age):
 =======
->>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
 """Defines a class Student."""
 
 
@@ -29,17 +26,12 @@ class Student:
             last_name (str): The last name of the student.
             age (int): The age of the student.
         """
-<<<<<<< HEAD
-=======
 >>>>>>> 0f9335aeefad229f6daf32095d498cf8bbd11781
->>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
 
     def to_json(self, attrs=None):
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
         """retrieves a dictionary representation of a Student instance"""
         if attrs is None:
@@ -50,8 +42,13 @@ class Student:
                 if hasattr(self, item):
                     new_dict[item] = getattr(self, item)
             return new_dict
+
+    def reload_from_json(self, json):
+        """replaces all attributes of the Student instance """
+        for key, value in json.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
 =======
->>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
         """Get a dictionary representation of the Student.
         If attrs is a list of strings, represents only those attributes
         included in the list.
@@ -62,7 +59,12 @@ class Student:
                 all(type(ele) == str for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
-<<<<<<< HEAD
-=======
+
+    def reload_from_json(self, json):
+        """Replace all attributes of the Student.
+        Args:
+            json (dict): The key/value pairs to replace attributes with.
+        """
+        for k, v in json.items():
+            setattr(self, k, v)
 >>>>>>> 0f9335aeefad229f6daf32095d498cf8bbd11781
->>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
