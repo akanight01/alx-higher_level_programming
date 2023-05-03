@@ -1,4 +1,9 @@
+<<<<<<< HEAD
+
+n - Input/Output
+=======
 Python - Input/Output
+>>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
 In this project, I practiced file handling in Python. I used the builtin with, open, and read functions with the json module to read and write files and serialize and deserialize objects with JSON.
 
 Function Prototypes 💾
@@ -75,3 +80,7 @@ If n is less than or equal to 0, returns an empty list.
 Total file size up that point: File size: <total size>
 Status code of each read line, printed in ascending order: <status code>: <number>
 Input format: <IP Address> - [<date>] "GET /projects/260 HTTP/1.1" <status code> <file size>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import sys
 
 
@@ -52,6 +54,7 @@ except KeyboardInterrupt:
     print_info()
     raise
 =======
+>>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
 """Reads from standard input and computes metrics.
 After every ten lines or the input of a keyboard interruption (CTRL + C),
 prints the following statistics:
@@ -108,4 +111,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print_stats(size, status_codes)
         raise
+<<<<<<< HEAD
+=======
 >>>>>>> 0f9335aeefad229f6daf32095d498cf8bbd11781
+>>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566

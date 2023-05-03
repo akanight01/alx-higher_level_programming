@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 """ Module that executes a function that appends a line """
 
 
@@ -21,6 +23,7 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'w', encoding="utf-8") as f:
         f.write("".join(res_line))
 =======
+>>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
 """Defines a text file insertion function."""
 
 
@@ -39,4 +42,7 @@ def append_after(filename="", search_string="", new_string=""):
                 text += new_string
     with open(filename, "w") as w:
         w.write(text)
+<<<<<<< HEAD
+=======
 >>>>>>> 0f9335aeefad229f6daf32095d498cf8bbd11781
+>>>>>>> 5e672edc13e61c221d0d9bc6cd742692f5d6e566
