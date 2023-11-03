@@ -1,3 +1,6 @@
-[ZoneTransfer]
-ZoneId=3
-ReferrerUrl=C:\Users\Thaoban\Downloads\alx-higher_level_programming-main (1).zip
+#!/usr/bin/python3
+Square = __import__('0-square').Square
+
+my_square = Square()
+print(type(my_square))
+print(my_square.__dict__)
